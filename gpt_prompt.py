@@ -2,7 +2,9 @@ from openai import OpenAI
 import os
 from get_environnement import get_environnement
 
-client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+key = os.environ["OPENAI_API_KEY"]
+
+client = OpenAI(api_key=key)
 
 def get_gpt_command(task_description, historique):
     """Renvoie la commande à exécuter pour accomplir la tâche donnée."""
